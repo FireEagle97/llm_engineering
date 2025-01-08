@@ -115,3 +115,8 @@ Please do message me or email me at ed@edwarddonner.com if this doesn't work or 
         </td>
     </tr>
 </table>
+
+### Updating Code
+1. Git pull and merge your changes as needed
+2. run conda env update --f environment.yml --prune
+3. Then restart the kernel (Kernel menu >> Restart Kernel and Clear Outputs Of All Cells) to pick up the changes.
