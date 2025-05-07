@@ -13,7 +13,7 @@ I use a platform called Anaconda to set up your environment. It's a powerful too
 
 Having said that: if you have any problems with Anaconda, I've provided an alternative approach. It's faster and simpler and should have you running quickly, with less of a guarantee around compatibility.
 
-### Before we begin - Heads up!
+### Before we begin - Heads up! Please do check these Windows "gotchas":
 
 If you are relatively new to using the Command Prompt, here is an excellent [guide](https://chatgpt.com/share/67b0acea-ba38-8012-9c34-7a2541052665) with instructions and exercises. I'd suggest you work through this first to build some confidence.
 
@@ -31,7 +31,8 @@ This gets you a local copy of the code on your box.
 1. **Install Git** (if not already installed):
 
 - Download Git from https://git-scm.com/download/win
-- Run the installer and follow the prompts, using default options (press OK lots of times!)
+- Run the installer and follow the prompts, using default options (press OK lots of times!). 
+- After the installation, you may need to open a new Powershell window to use it (or you might even need to restart)
 
 2. **Open Command Prompt:**
 
@@ -71,7 +72,8 @@ If this Part 2 gives you any problems, there is an alternative Part 2B below tha
 - Open **Anaconda Prompt** (search for it in the Start menu)
 - Navigate to the "project root directory" by entering something like `cd C:\Users\YourUsername\Documents\Projects\llm_engineering` using the actual path to your llm_engineering project root directory. Do a `dir` and check you can see subdirectories for each week of the course.
 - Create the environment: `conda env create -f environment.yml`
-- Wait for a few minutes for all packages to be installed - in some cases, this can literally take 20-30 minutes if you've not used Anaconda before, and even longer depending on your internet connection. Important stuff is happening! If this runs for more than 1 hour 15 mins, or gives you other problems, please go to Part 2B instead.
+- **If you get an ArchiveError issue, then this is caused by the Windows 260 character limit - see gotcha number 3 at the top**
+- Wait for a few minutes for all packages to be installed - in some cases, this can literally take 30 minutes if you've not used Anaconda before, and even longer depending on your internet connection. Important stuff is happening! If this runs for more than 1 hour 15 mins, or gives you other problems, please go to Part 2B instead.  
 - You have now built an isolated, dedicated AI environment for engineering LLMs, running vector datastores, and so much more! You now need to **activate** it using this command: `conda activate llms`  
 
 You should see `(llms)` in your prompt, which indicates you've activated your new environment.
